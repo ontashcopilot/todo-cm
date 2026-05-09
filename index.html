@@ -13,6 +13,15 @@
       <p class="date" id="date"></p>
     </header>
 
+    <div class="search-area">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="&#128269; Search tasks..."
+        autocomplete="off"
+      />
+    </div>
+
     <div class="input-area">
       <input
         type="text"
@@ -21,6 +30,12 @@
         autocomplete="off"
         maxlength="200"
       />
+      <select id="priority-select">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <input type="date" id="due-date-input" />
       <button id="add-btn" aria-label="Add task">Add</button>
     </div>
 
@@ -28,6 +43,7 @@
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="active">Active</button>
       <button class="filter-btn" data-filter="completed">Completed</button>
+      <button class="filter-btn" data-filter="overdue">Overdue</button>
     </div>
 
     <ul id="todo-list" role="list"></ul>
